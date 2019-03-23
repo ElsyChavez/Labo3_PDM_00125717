@@ -1,9 +1,12 @@
 package com.example.labo3;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.labo3.utils.AppConstants;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +23,12 @@ public class MainActivity extends AppCompatActivity {
         texto_password = findViewById(R.id.password);
         texto_email = findViewById(R.id.email);
         texto_gender = findViewById(R.id.gender);
+
+        boton_send.setOnClickListener(v->{
+            Intent mIntent= new Intent(MainActivity.this, NewActivity.class);
+            mIntent.putExtra(AppConstants.TEXT_KEY, texto_user.getText().toString());
+            startActivity(mIntent);
+        });
 
     }
 }
