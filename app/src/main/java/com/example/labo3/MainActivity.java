@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         texto_email = findViewById(R.id.email);
         texto_gender = findViewById(R.id.gender);
 
-        boton_send.setOnClickListener(v->{
-            Intent mIntent= new Intent(MainActivity.this, NewActivity.class);
+        boton_send.setOnClickListener(v -> {
+            Intent mIntent = new Intent(MainActivity.this, NewActivity.class);
             mIntent.putExtra(AppConstants.TEXT_KEY, texto_user.getText().toString());
             mIntent.putExtra(AppConstants.TEXT_KEY1, texto_password.getText().toString());
             mIntent.putExtra(AppConstants.TEXT_KEY2, texto_email.getText().toString());

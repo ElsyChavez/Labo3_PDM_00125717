@@ -30,6 +30,7 @@ public class NewActivity extends AppCompatActivity {
         } */
 
         Bundle bundle = getIntent().getExtras();
+
         String dato1 = bundle.getString(AppConstants.TEXT_KEY);
         text_user.setText(dato1);
         String dato2 = bundle.getString(AppConstants.TEXT_KEY1);
@@ -38,6 +39,16 @@ public class NewActivity extends AppCompatActivity {
         text_email.setText(dato3);
         String dato4 = bundle.getString(AppConstants.TEXT_KEY3);
         text_gender.setText(dato4);
+
+        String conjunto_datos = "Username: " +  dato1 + " Password: " + dato2 + " Email: " + dato3 + " Gender: " + dato4;
+
+        boton_share.setOnClickListener(v->{
+            Intent mIntent=new Intent();
+            mIntent.setAction(Intent.ACTION_SEND);
+            mIntent.setType("text/plain");
+            mIntent.putExtra(Intent.EXTRA_TEXT, conjunto_datos);
+            startActivity(mIntent);
+        });
 
     }
 }
