@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         boton_send.setOnClickListener(v->{
             Intent mIntent= new Intent(MainActivity.this, NewActivity.class);
             mIntent.putExtra(AppConstants.TEXT_KEY, texto_user.getText().toString());
+            mIntent.putExtra(AppConstants.TEXT_KEY1, texto_password.getText().toString());
+            mIntent.putExtra(AppConstants.TEXT_KEY2, texto_email.getText().toString());
+            mIntent.putExtra(AppConstants.TEXT_KEY3, texto_gender.getText().toString());
             startActivity(mIntent);
         });
 

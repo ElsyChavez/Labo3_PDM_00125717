@@ -24,10 +24,20 @@ public class NewActivity extends AppCompatActivity {
         text_email = findViewById(R.id.print_email);
         text_gender = findViewById(R.id.print_gender);
 
-        Intent mIntent=this.getIntent();
+        /* Intent mIntent=this.getIntent();
         if (mIntent!=null) {
             text_user.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
-        }
+        } */
+
+        Bundle bundle = getIntent().getExtras();
+        String dato1 = bundle.getString(AppConstants.TEXT_KEY);
+        text_user.setText(dato1);
+        String dato2 = bundle.getString(AppConstants.TEXT_KEY1);
+        text_pass.setText(dato2);
+        String dato3 = bundle.getString(AppConstants.TEXT_KEY2);
+        text_email.setText(dato3);
+        String dato4 = bundle.getString(AppConstants.TEXT_KEY3);
+        text_gender.setText(dato4);
 
     }
 }
