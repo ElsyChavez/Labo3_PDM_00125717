@@ -7,65 +7,50 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="@dimen/medium_padding"
-    tools:context=".MainActivity">
+    tools:context=".NewActivity">
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/print_user"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/aqua_color"
-        android:hint="@string/username_text"
-        android:padding="@dimen/small_padding"
         android:textColor="@color/white_color"
-        android:textColorHint="@color/white_color"
         android:textSize="@dimen/media" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/print_password"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margen_top"
-        android:backgroundTint="@color/aqua_color"
-        android:hint="@string/password_text"
-        android:padding="@dimen/small_padding"
         android:textColor="@color/white_color"
-        android:textColorHint="@color/white_color"
         android:textSize="@dimen/media" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/print_email"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margen_top"
-        android:backgroundTint="@color/aqua_color"
-        android:hint="@string/email_text"
-        android:padding="@dimen/small_padding"
         android:textColor="@color/white_color"
-        android:textColorHint="@color/white_color"
         android:textSize="@dimen/media" />
 
-    <EditText
-        android:id="@+id/gender"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/print_gender"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margen_top"
-        android:backgroundTint="@color/aqua_color"
-        android:hint="@string/gender_text"
-        android:padding="@dimen/small_padding"
         android:textColor="@color/white_color"
-        android:textColorHint="@color/white_color"
         android:textSize="@dimen/media" />
 
     <Button
-        android:id="@+id/boton_send"
+        android:id="@+id/share_boton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="@dimen/margen_top"
-        android:background="@color/red_color"
+        android:background="@color/aqua_color"
         android:padding="@dimen/small_padding"
-        android:text="@string/send_text"
+        android:text="@string/share_text"
         android:textColor="@color/white_color"
         android:textSize="@dimen/media" />
 
 </LinearLayout>
+
